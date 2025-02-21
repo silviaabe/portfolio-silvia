@@ -1,9 +1,9 @@
 import ProfilePhoto from "../../assets/images/profile.jpg"
-import { AboutAll, AboutButton, AboutDescription, AboutTitle, ProfileImg, Technologies, TechnologiesWrapper } from "./styles"
+import { AboutButton, AboutDescription, AboutSection, AboutTitle, ProfileImg, Technologies, TechnologiesWrapper } from "./styles"
 
 const About = () => {
   return (
-    <AboutAll id="about">
+    <AboutSection id="about">
       <ProfileImg src={ProfilePhoto} alt="Profile" />
       <div>
         <AboutTitle>Sobre mim</AboutTitle>
@@ -42,7 +42,7 @@ const About = () => {
         </Technologies>
         <AboutButton href="https://github.com/silviaabe/my_portfolio/blob/main/assets/images/CV%20Silvia%20Abe.pdf" target="_blank">Baixar CV</AboutButton>
       </div>
-    </AboutAll>
+    </AboutSection>
   )
 }
 

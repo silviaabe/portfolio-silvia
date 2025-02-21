@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const AboutAll = styled.div`
+export const AboutSection = styled.section`
   height: 110vh;
   text-align: center;
   justify-content: center;
@@ -39,7 +39,7 @@ export const AboutButton = styled.a`
   font-size: 18px;
   border-radius: 26px;
 
-  a:hover {
+  &:hover {
     cursor: pointer;
     background-color: var(--light-gray);
     color: var(--black);
@@ -68,7 +68,7 @@ export const Technologies = styled.div`
   gap: 10px;
   padding-bottom: 50px;
 
-  ::-webkit-scrollbar {
+  &::-webkit-scrollbar {
   display: none;
 }
 `
