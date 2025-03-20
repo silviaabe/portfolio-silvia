@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const AboutSection = styled.section`
-  height: 110vh;
+  height: 100%;
   text-align: center;
   justify-content: center;
-  padding: 100px 20%;
+  padding: 100px 20% 150px;
   position: relative;
   transition: opacity 0.5s ease-in-out;
 `
@@ -12,28 +12,27 @@ export const AboutSection = styled.section`
 export const ProfileImg = styled.img`
   height: 200px;
   border-radius: 100%;
-  border: 2px solid var(--dark-gray);
+  border: 2px solid #ffd700;
 `
 
 export const AboutTitle = styled.h2`
-  color: var(--dark-gray);
+  color: #ffd700;
   font-size: 35px;
-  margin-bottom: 25px;
+  margin-bottom: 35px;
 `
 
 export const AboutDescription = styled.p`
   color: var(--black);
   font-size: 18px;
-  font-family: "Nunito Sans", serif;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   text-align: center;
 `
 
 export const AboutButton = styled.a`
   display: inline-block;
   padding: 10px 20px;
-  background-color: var(--black);
-  color: var(--white);
+  background-color: #ffd700;
+  color: #503A8F;
   text-align: center;
   text-decoration: none;
   font-size: 18px;
@@ -41,9 +40,9 @@ export const AboutButton = styled.a`
 
   &:hover {
     cursor: pointer;
-    background-color: var(--light-gray);
-    color: var(--black);
-    border: 1px solid var(--black);
+    background-color: #503A8F;
+    color: #fff;
+    border: 1px solid #ffd700;
     transition: ease 0.5s;
   }
 
@@ -59,41 +58,36 @@ export const AboutButton = styled.a`
 
 export const Technologies = styled.div`
   display: flex;
-  justify-content: flex-start;
-  /* align-items: center; */
-  flex-wrap: nowrap;
-  overflow-y: hidden;
-  overflow-x: auto;
+  overflow: hidden;
   white-space: nowrap;
-  gap: 10px;
+  width: 100%;
   padding-bottom: 50px;
-
-  &::-webkit-scrollbar {
-  display: none;
-}
 `
 
 export const TechnologiesWrapper = styled.div`
   display: flex;
-  /* align-items: center; */
-  transition: transform 9s linear;
+  gap: 20px;
+  animation: scroll 60s linear infinite;
+  width: max-content;
+  padding-top: 5px;
 
   i {
     font-size: 40px;
-    margin-right: 5px;
     color: var(--dark-gray);
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
-    object-fit: contain;
-    max-height: 120px;
     transition: transform 450ms;
-    animation: moveIcons 60s linear infinite; 
   }
 
   i:hover {
     transform: scale(1.1);
     cursor: pointer;
   }
-`
 
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+`
