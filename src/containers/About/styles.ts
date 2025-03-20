@@ -36,6 +36,7 @@ export const AboutButton = styled.a`
   text-align: center;
   text-decoration: none;
   font-size: 18px;
+  border: 1px solid #503A8F;
   border-radius: 26px;
 
   &:hover {
