@@ -7,7 +7,7 @@ export const ProjectsSection = styled.section`
 `
 
 export const ProjectsTitle = styled.h2`
-  color: var(--dark-gray);
+  color: #ffd700;
   font-size: 35px;
   margin-bottom: 25px;
   text-align: center;
@@ -25,8 +25,8 @@ export const GridContainer = styled.div`
 `
 
 export const GridItem = styled.div`
-  background-color: var(--medium-gray);
-  color: var(--project-text);
+  background-color: #fff;
+  color: #503A8F;
   padding: 20px;
   text-align: center;
   border-radius: 5px;
@@ -40,6 +40,8 @@ export const ProjectsImg = styled.img`
   height: 270px;
   object-fit: cover;
   width: 100%;
+  border: 2px solid #503A8F;
+  border-radius: 5px;
 `
 
 export const ProjectsDescription = styled.h3`
@@ -63,19 +65,21 @@ export const ProjectsButtons = styled.div`
 export const ProjectsButton = styled.a`
   display: inline-block;
   padding: 10px 20px;
-  background-color: var(--medium-gray);
-  color: var(--project-text);
+  background-color: #ffd700;
+  color: #503A8F;
+  margin-right: 5px;
   text-align: center;
   text-decoration: none;
   border: none;
   font-size: 12px;
   border-radius: 26px;
-  border: 1px solid var(--project-text);
+  border: 1px solid #ffd700;
 
   &:hover {
     cursor: pointer;
-    background-color: var(--project-text);
-    color: var(--button-hover);
+    background-color: #fff;
+    color: #503A8F;
+    border: 1px solid #503A8F;
   }
 `
 
