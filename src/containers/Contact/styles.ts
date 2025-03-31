@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ContactSection = styled.section`
-  height: 70vh;
+  height: 100%;
   position: relative;
   transition: opacity 0.5s ease-in-out;
   padding: 0 10%;
@@ -13,17 +13,16 @@ export const ContactSection = styled.section`
 `
 
 export const ContactTitle = styled.h2`
-  color: var(--dark-gray);
+  color: #ffd700;
   font-size: 35px;
   margin-bottom: 25px;
   text-align: center;
 `
 
 export const ContactLinks = styled.div`
-  color: var(--dark-gray);
   text-align: left;
   grid-gap: 20px;
-  padding: 70px 20px 20px;
+  padding: 90px 20px;
 `
 
 export const ContactLink = styled.div`
@@ -40,14 +39,14 @@ export const ContactIcon = styled.a`
   }
 
   i {
-    background-color: var(--light-gray);
-    color: var(--black);
+    background-color: #503A8F;
+    color: #ffd700;
     margin-right: 10px;
     font-size: 30px;
   }
 
   h3 {
-        color: var(--dark-gray);
+        color: #ffd700;
         font-size: 20px;
       }
 `
