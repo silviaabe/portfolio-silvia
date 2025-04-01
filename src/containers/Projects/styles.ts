@@ -30,9 +30,15 @@ export const GridItem = styled.div`
   padding: 20px;
   text-align: center;
   border-radius: 5px;
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
 
   h3 {
     margin-bottom: 8px;;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
   }
 `
 
@@ -40,8 +46,8 @@ export const ProjectsImg = styled.img`
   height: 270px;
   object-fit: cover;
   width: 100%;
-  border: 2px solid #503A8F;
   border-radius: 5px;
+  box-shadow: 0px 0px 8px 2px rgba(80, 58, 143, 0.6);
 `
 
 export const ProjectsDescription = styled.h3`
