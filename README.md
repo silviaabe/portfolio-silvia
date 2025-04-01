@@ -1,50 +1,58 @@
-# React + TypeScript + Vite
+# Meu Portfólio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é o repositório do meu portfólio, desenvolvido com React, TypeScript, Vite e Styled-Components, onde apresento meus projetos e habilidades como desenvolvedora Front-End.
 
-Currently, two official plugins are available:
+<br>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<p align="center">
+  <img alt="Meu Portfólio" src="https://github.com/user-attachments/assets/6ec5a502-c4d2-4743-bed0-890c576bd5f9" width="700">
+</p>
 
-## Expanding the ESLint configuration
+## Tecnologias
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-- Configure the top-level `parserOptions` property like this:
+- <b>React</b>: Biblioteca JavaScript para criação de interfaces de usuário declarativas e componentizadas.
+- <b>TypeScript</b>: Linguagem baseada em JavaScript com tipagem estática.
+- <b>Vite</b>: Ferramenta de build e desenvolvimento rápida para aplicações front-end modernas, otimizando a performance do projeto.
+- <b>Styled-Components</b>: Biblioteca para estilização de componentes em React.
+- <b>Vercel</b>: Plataforma de deploy para aplicações front-end, usada para fazer o deploy contínuo do projeto.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Projeto
+
+🚀 [Acesse o projeto finalizado](https://silviaabeportfolio.vercel.app/)
+
+## Autor
+
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/silvia-abe) [![GitHub](https://img.shields.io/badge/-GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/silviaabe)  
+
+Silvia Abe - silviaabebuzatto@gmail.com
+
+<br>
+
+---
+
+## Como rodar o projeto localmente
+
+Siga os passos abaixo para rodar o projeto em sua máquina local:
+
+#### Clone o repositório
+```sh
+git clone https://github.com/silviaabe/portfolio-silvia.git
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+#### Acesse a pasta do projeto
+```sh
+cd portfolio-silvia
 ```
+
+#### Instale as dependências
+```sh
+npm install
+```
+
+#### Rode o servidor local
+```sh
+npm run dev
+```
+
