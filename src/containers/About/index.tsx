@@ -46,7 +46,7 @@ const About = () => {
             ))}
           </TechnologiesWrapper>
         </Technologies>
-        <AboutButton href="https://github.com/silviaabe/my_portfolio/blob/main/assets/images/CV%20Silvia%20Abe.pdf" target="_blank">Baixar CV</AboutButton>
+        <AboutButton href="https://github.com/silviaabe/portfolio-silvia/blob/main/src/assets/images/CV%20Silvia%20Abe.pdf" target="_blank">Baixar CV</AboutButton>
       </div>
     </AboutSection>
   )
