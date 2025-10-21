@@ -7,7 +7,7 @@ export const ProjectsSection = styled.section`
 `
 
 export const ProjectsTitle = styled.h2`
-  color: #ffd700;
+  color: ${({ theme }) => theme.colors.secondary};
   font-size: 35px;
   margin-bottom: 25px;
   text-align: center;
@@ -25,8 +25,8 @@ export const GridContainer = styled.div`
 `
 
 export const GridItem = styled.div`
-  background-color: #fff;
-  color: #503A8F;
+  background-color: ${({ theme }) => theme.colors.textLight};
+  color: ${({ theme }) => theme.colors.primary};
   padding: 20px;
   text-align: center;
   border-radius: 5px;
@@ -48,15 +48,27 @@ export const ProjectsImg = styled.img`
   width: 100%;
   border-radius: 5px;
   box-shadow: 0px 0px 8px 2px rgba(80, 58, 143, 0.6);
+
+  @media (max-width: 768px) {
+    height: 220px;
+  }
+
+  @media (max-width: 480px) {
+    height: 180px;
+  }
 `
 
 export const ProjectsDescription = styled.h3`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-top: 8px;
+  flex-wrap: wrap;
 
   @media (max-width: 480px) {
-    display: block;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
   }
 `
 
@@ -71,21 +83,22 @@ export const ProjectsButtons = styled.div`
 export const ProjectsButton = styled.a`
   display: inline-block;
   padding: 10px 20px;
-  background-color: #ffd700;
-  color: #503A8F;
+  background-color: ${({ theme }) => theme.colors.secondary};
+  color: ${({ theme }) => theme.colors.primary};
   margin-right: 5px;
   text-align: center;
   text-decoration: none;
-  border: none;
   font-size: 12px;
   border-radius: 26px;
-  border: 1px solid #ffd700;
+  border: 1px solid ${({ theme }) => theme.colors.secondary};
+  transition: all 0.3s ease;
 
   &:hover {
     cursor: pointer;
-    background-color: #fff;
-    color: #503A8F;
-    border: 1px solid #503A8F;
+    background-color: ${({ theme }) => theme.colors.textLight};
+    color: ${({ theme }) => theme.colors.primary};
+    border: 1px solid ${({ theme }) => theme.colors.primary};
+    transform: translateY(-2px);
   }
 `
 
@@ -107,7 +120,6 @@ export const TechTags = styled.div`
   }
 
   .tag-icon:hover {
-    cursor: pointer;
     transform: scale(1.3);
   }
 `

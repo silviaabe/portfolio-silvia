@@ -1,5 +1,15 @@
-import ProfilePhoto from "../../assets/images/profile.jpg"
-import { AboutButton, AboutDescription, AboutSection, AboutTitle, ProfileImg, Technologies, TechnologiesWrapper } from "./styles"
+import ProfilePhoto from "../../assets/images/profile.webp"
+import { 
+  AboutButton, 
+  AboutContainer, 
+  AboutContent, 
+  AboutDescription, 
+  AboutSection, 
+  AboutTitle, 
+  ProfileImg,
+  Technologies, 
+  TechnologiesWrapper 
+} from "./styles"
 
 const About = () => {
   const icons = [
@@ -34,20 +44,38 @@ const About = () => {
   ]
 
   return (
-    <AboutSection id="about">
-      <ProfileImg src={ProfilePhoto} alt="Profile" />
-      <div>
-        <AboutTitle>Sobre mim</AboutTitle>
-        <AboutDescription>Sou Desenvolvedora Front-End especializada em criar interfaces visuais fluidas, interativas e responsivas, utilizando as principais e mais modernas tecnologias web.</AboutDescription>
-        <Technologies>
-          <TechnologiesWrapper>
-            {[...icons, ...icons].map((icon, index) => (
-              <i key={index} className={`${icon.className} icon`} title={icon.title}/>
-            ))}
-          </TechnologiesWrapper>
-        </Technologies>
-        <AboutButton href="https://github.com/silviaabe/portfolio-silvia/blob/main/src/assets/images/CV%20Silvia%20Abe.pdf" target="_blank">Baixar CV</AboutButton>
-      </div>
+    <AboutSection id="about" aria-labelledby="about-heading">
+      <AboutContainer>
+        <ProfileImg src={ProfilePhoto} alt="Foto de perfil de Silvia Abe" />
+        <AboutContent>
+          <AboutTitle id="about-heading">Sobre mim</AboutTitle>
+          <AboutDescription>
+            Sou Desenvolvedora Front-End apaixonada por transformar ideias em interfaces acessíveis e intuitivas. Tenho experiência com React, TypeScript e metodologias ágeis, e adoro aprender novas tecnologias.
+          </AboutDescription>
+
+          <Technologies aria-label="Principais tecnologias">
+            <TechnologiesWrapper>
+              {[...icons, ...icons].map((icon, index) => (
+                <i 
+                  key={index} 
+                  className={`${icon.className} icon`} 
+                  title={icon.title}
+                  aria-hidden="true"
+                />
+              ))}
+            </TechnologiesWrapper>
+          </Technologies>
+
+          <AboutButton 
+            href="https://github.com/silviaabe/portfolio-silvia/blob/main/src/assets/images/CV%20Silvia%20Abe.pdf" 
+            rel="noopener noreferrer" 
+            target="_blank"
+            aria-label="Baixar currículo de Silvia Abe (abre em nova aba)"
+          >
+            Baixar CV
+          </AboutButton>
+        </AboutContent>
+      </AboutContainer>
     </AboutSection>
   )
 }

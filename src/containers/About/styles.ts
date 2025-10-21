@@ -1,59 +1,75 @@
 import styled from "styled-components";
 
 export const AboutSection = styled.section`
-  height: 100%;
-  text-align: center;
+  min-height: 100vh;
+  padding: 100px 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  padding: 100px 20% 150px;
-  position: relative;
-  transition: opacity 0.5s ease-in-out;
+  background-color: ${({ theme }) => theme.colors.primary};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    padding: 80px 5%;
+    flex-direction: column;
+  }
 `
+
+export const AboutContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 60px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    flex-direction: column;
+    gap: 30px;
+  }
+`;
 
 export const ProfileImg = styled.img`
-  height: 200px;
-  border-radius: 100%;
-  border: 2px solid #ffd700;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 2px solid ${({ theme }) => theme.colors.secondary};
+  object-fit: cover;
+  flex-shrink: 0;
 `
 
+export const AboutContent = styled.div`
+  max-width: 600px;
+  text-align: left;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    text-align: center;
+  }
+`;
+
 export const AboutTitle = styled.h2`
-  color: #ffd700;
-  font-size: 35px;
-  margin-bottom: 35px;
+  color: ${({ theme }) => theme.colors.secondary};
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
 `
 
 export const AboutDescription = styled.p`
-  color: var(--black);
-  font-size: 18px;
-  margin-bottom: 40px;
-  text-align: center;
+  color: ${({ theme }) => theme.colors.textLight};
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
 `
 
 export const AboutButton = styled.a`
   display: inline-block;
-  padding: 10px 20px;
-  background-color: #ffd700;
-  color: #503A8F;
-  text-align: center;
-  text-decoration: none;
-  font-size: 18px;
-  border: 1px solid #503A8F;
+  padding: 12px 28px;
+  background-color: ${({ theme }) => theme.colors.secondary};
+  color: ${({ theme }) => theme.colors.primary};
   border-radius: 26px;
+  border: 1px solid ${({ theme }) => theme.colors.primary};
+  font-weight: 600;
+  transition: all 0.3s ease;
 
   &:hover {
-    cursor: pointer;
-    background-color: #503A8F;
-    color: #fff;
-    border: 1px solid #ffd700;
-    transition: ease 0.5s;
-  }
-
-  @media (max-width: 767px) {
-    height: auto;
-    padding: 60px 10%;
-  }
-
-  @media (max-width: 480px) {
-    height: auto;
+    background-color: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.textLight};
+    border: 1px solid ${({ theme }) => theme.colors.secondary};
   }
 `
 
@@ -62,7 +78,7 @@ export const Technologies = styled.div`
   overflow: hidden;
   white-space: nowrap;
   width: 100%;
-  padding-bottom: 50px;
+  padding: 30px 0 50px;
 `
 
 export const TechnologiesWrapper = styled.div`
@@ -70,24 +86,22 @@ export const TechnologiesWrapper = styled.div`
   gap: 20px;
   animation: scroll 60s linear infinite;
   width: max-content;
-  padding-top: 5px;
 
   i {
     font-size: 40px;
-    color: var(--dark-gray);
+    color: ${({ theme }) => theme.colors.darkGray};
     transition: transform 450ms;
   }
 
   i:hover {
     transform: scale(1.1);
-    cursor: pointer;
   }
 
 @keyframes scroll {
-  from {
+  0% {
     transform: translateX(0);
   }
-  to {
+  100% {
     transform: translateX(-50%);
   }
 }
