@@ -5,7 +5,7 @@ import * as S from "./styles";
 const Hero = () => {
   return (
     <S.HeroSection bg={HeroImage} bg2={HeroImage2}>
-      <div className="hero-content">
+      <div>
         <S.HeroTitle>
           Olá, <br/> meu <br/> nome <br/> é <span>S</span>ilvia!
         </S.HeroTitle>

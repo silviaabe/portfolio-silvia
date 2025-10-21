@@ -6,7 +6,7 @@ export const HeroSection = styled.section<{bg: string; bg2: string}>`
   overflow: hidden;
 
   background-image: url(${(props) => props.bg});
-  background-size: contain;
+  background-size: 100vh;
   background-position: right top;
   background-repeat: no-repeat;
 
@@ -24,7 +24,7 @@ export const HeroSection = styled.section<{bg: string; bg2: string}>`
   }
   
   
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
     background-size: 60%;
     background-position: right top;
 
@@ -51,7 +51,7 @@ export const HeroTitle = styled.h1`
     color: ${({ theme }) => theme.colors.textLight};
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
     font-size: 2.2rem;
     line-height: 1.6;
     margin-top: 70px;
@@ -69,7 +69,7 @@ export const HeroSubtitle = styled.h3`
   margin-bottom: 8px;
   margin-left: 200px;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
     font-size: 1rem;
   }
 `
@@ -81,7 +81,7 @@ export const HeroSubtitle2 = styled.h3`
   letter-spacing: 1.5px;
   margin-left: 200px;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
     font-size: 0.9rem;
   }
 `

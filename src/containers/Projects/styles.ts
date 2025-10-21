@@ -19,7 +19,7 @@ export const GridContainer = styled.div`
   grid-gap: 20px;
   padding: 20px;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
     grid-template-columns: 1fr;
   }
 `
@@ -49,11 +49,11 @@ export const ProjectsImg = styled.img`
   border-radius: 5px;
   box-shadow: 0px 0px 8px 2px rgba(80, 58, 143, 0.6);
 
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
     height: 220px;
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
     height: 180px;
   }
 `
@@ -65,7 +65,7 @@ export const ProjectsDescription = styled.h3`
   margin-top: 8px;
   flex-wrap: wrap;
 
-  @media (max-width: 480px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
@@ -73,7 +73,7 @@ export const ProjectsDescription = styled.h3`
 `
 
 export const ProjectsButtons = styled.div`
-  @media (max-width: 480px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
     display: flex;
     justify-content: left;
     gap: 8px;
@@ -108,7 +108,7 @@ export const TechTags = styled.div`
   gap: 10px;
   margin-top: 10px;
 
-  @media (max-width: 480px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
     justify-content: left;
     margin-left: 4px;
     margin-top: 12px;
