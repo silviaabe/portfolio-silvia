@@ -4,6 +4,8 @@ export const HeroSection = styled.section<{bg: string; bg2: string}>`
   height: 100vh;
   position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: flex-start;
 
   background-image: url(${(props) => props.bg});
   background-size: 100vh;
@@ -16,8 +18,8 @@ export const HeroSection = styled.section<{bg: string; bg2: string}>`
     width: 150%;
     inset: 0;
     background-image: url(${(props) => props.bg2});
-    background-size: 30%;
-    background-position: left 80%;
+    background-size: clamp(20%, 20vw, 25%);
+    background-position: clamp(8%, 8vw, 17%) clamp(68%, 68vw, 55%);
     background-repeat: no-repeat;
     z-index: -1;
     opacity: 0.5;
@@ -30,56 +32,39 @@ export const HeroSection = styled.section<{bg: string; bg2: string}>`
 
     &::before {
       background-size: 25%;
-      background-position: 22% 55%;
+      background-position: 17% 55%;
     }
   }
 `
 
 export const HeroTitle = styled.h1`
-  font-size: 3rem;
+  font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 400;
-  line-height: 72px;
+  line-height: clamp(2.5rem, 6vw, 4.5rem);
   font-family: "Sigmar", sans-serif;
-  letter-spacing: 4px;
-  padding: 120px 0 110px;
-  margin-left: 200px;
+  letter-spacing: clamp(2px, 1vw, 4px);
+  padding: 100px 0 100px;
+  margin-left: clamp(50px, 20vw, 200px);
 
   span {
-    font-size: 3.6rem;
+    font-size: clamp(2.5rem, 6vw, 3.6rem);
     font-family: "Sigmar", sans-serif;
     color: ${({ theme }) => theme.colors.textLight};
-  }
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
-    font-size: 2.2rem;
-    line-height: 1.6;
-
-    span {
-      font-size: 2.6rem;
-    }
   }
 `
 
 export const HeroSubtitle = styled.h3`
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
   font-weight: 300;
-  letter-spacing: 1.5px;
-  margin-bottom: 8px;
-  margin-left: 200px;
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
-    font-size: 1rem;
-  }
+  letter-spacing: clamp(1px, 1vw, 1.5px);
+  margin-bottom: clamp(4px, 1vw, 8px);
+  margin-left: clamp(50px, 20vw, 200px);
 `
 
 export const HeroSubtitle2 = styled.h3`
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
   font-weight: 300;
   color: ${({ theme }) => theme.colors.secondary};
-  letter-spacing: 1.5px;
-  margin-left: 200px;
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
-    font-size: 0.9rem;
-  }
+  letter-spacing: clamp(1px, 1vw, 1.5px);
+  margin-left: clamp(50px, 20vw, 200px);
 `
