@@ -1,23 +1,27 @@
 import styled from "styled-components";
 
 export const ProjectsSection = styled.section`
-  padding-bottom: 100px;
+  padding: clamp(60px, 8vw, 100px) clamp(5%, 8vw, 10%);
   position: relative;
   transition: opacity 0.5s ease-in-out;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    padding: 40px 5%;
+  }
 `
 
 export const ProjectsTitle = styled.h2`
   color: ${({ theme }) => theme.colors.secondary};
-  font-size: 35px;
-  margin-bottom: 25px;
+  font-size: clamp(2rem, 3vw, 3rem);
+  margin-bottom: clamp(1.5rem, 2vw, 2rem);
   text-align: center;
+  line-height: 3rem;
 `
 
 export const GridContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
-  padding: 20px;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
     grid-template-columns: 1fr;

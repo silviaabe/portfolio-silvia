@@ -8,6 +8,10 @@ export const AboutSection = styled.section`
   align-items: center;
   justify-content: center;
   background-color: ${({ theme }) => theme.colors.primary};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    padding: 40px 5%;
+  }
 `;
 
 export const AboutContainer = styled.div`
@@ -46,8 +50,8 @@ export const AboutContent = styled.div`
 
 export const AboutTitle = styled.h2`
   color: ${({ theme }) => theme.colors.secondary};
-  font-size: clamp(1.5rem, 3vw, 2rem);
-  margin-bottom: clamp(1rem, 2vw, 1.5rem);
+  font-size: clamp(2rem, 3vw, 3rem);
+  margin-bottom: clamp(1.5rem, 2vw, 2rem);
 `;
 
 export const AboutDescription = styled.p`

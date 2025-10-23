@@ -3,21 +3,22 @@ import styled from "styled-components";
 export const ContactSection = styled.section`
   position: relative;
   transition: opacity 0.5s ease-in-out;
-  padding: 80px 10%;
+  padding: clamp(60px, 8vw, 100px) clamp(5%, 8vw, 10%);
   display: flex;
   flex-direction: column;
   align-items: center;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.md}){
-    padding: 60px 5%;
+    padding: 40px 5%;
   }
 `
 
 export const ContactTitle = styled.h2`
   color: ${({ theme }) => theme.colors.secondary};
-  font-size: 2.2rem;
-  margin-bottom: 40px;
+  font-size: clamp(2rem, 3vw, 3rem);
+  margin-bottom: clamp(1.5rem, 2vw, 2rem);
   text-align: center;
+  line-height: 3rem;
 `
 
 export const ContactLinks = styled.ul`
@@ -26,7 +27,7 @@ export const ContactLinks = styled.ul`
   max-width: 700px;
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 8px;
   padding: 0;
   margin: 0;
 `
