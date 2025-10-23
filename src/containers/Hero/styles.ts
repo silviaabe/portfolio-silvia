@@ -4,11 +4,13 @@ export const HeroSection = styled.section<{bg: string; bg2: string}>`
   height: 100vh;
   position: relative;
   overflow: hidden;
-  display: flex;
+  /* display: flex;
   align-items: flex-start;
+  justify-content: flex-start;
+  padding: clamp(40px, 5vw, 100px); */
 
   background-image: url(${(props) => props.bg});
-  background-size: 100vh;
+  background-size: clamp(60%, 20vw, 100%);
   background-position: right top;
   background-repeat: no-repeat;
 
@@ -18,23 +20,13 @@ export const HeroSection = styled.section<{bg: string; bg2: string}>`
     width: 150%;
     inset: 0;
     background-image: url(${(props) => props.bg2});
-    background-size: clamp(20%, 20vw, 25%);
-    background-position: clamp(8%, 8vw, 17%) clamp(68%, 68vw, 55%);
+    background-size: clamp(15%, 8vw, 35%);
+    background-position: clamp(10%, 8vw, 17%) clamp(45%, 40vw, 60%);
     background-repeat: no-repeat;
     z-index: -1;
     opacity: 0.5;
   }
   
-  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
-    background-size: 60%;
-    background-position: right top;
-    justify-content: center;
-
-    &::before {
-      background-size: 25%;
-      background-position: 17% 55%;
-    }
-  }
 `
 
 export const HeroTitle = styled.h1`
