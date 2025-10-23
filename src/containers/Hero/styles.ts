@@ -23,14 +23,14 @@ export const HeroSection = styled.section<{bg: string; bg2: string}>`
     opacity: 0.5;
   }
   
-  
   @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
     background-size: 60%;
     background-position: right top;
+    justify-content: center;
 
     &::before {
       background-size: 25%;
-      background-position: 22% 72%;
+      background-position: 22% 55%;
     }
   }
 `
@@ -43,7 +43,6 @@ export const HeroTitle = styled.h1`
   letter-spacing: 4px;
   padding: 120px 0 110px;
   margin-left: 200px;
-  margin-bottom: 32px;
 
   span {
     font-size: 3.6rem;
@@ -54,7 +53,6 @@ export const HeroTitle = styled.h1`
   @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
     font-size: 2.2rem;
     line-height: 1.6;
-    margin-top: 70px;
 
     span {
       font-size: 2.6rem;
